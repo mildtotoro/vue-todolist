@@ -7,20 +7,20 @@
       <input v-model="text" type="text">
       <input type="submit" value="submit">
     </form>
-    todolist
+    todo
     <List 
       :todoList="todoList"
       :addList="addDoingList"
       :removeItem="removeItem"
     />
-    doinglist
+    doing
     <List 
       :todoList="doingList"
       :addList="addDoneList"
       :removeItem="removeItem"
       :backStatusList="backStatusList"
     />
-    donelist
+    done
     <List 
       :todoList="doneList"
       :removeItem="removeItem"

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="">
         <div v-for="(list, index) in todoList" :key="index">
             
           {{list.text}}
@@ -21,9 +21,6 @@ export default {
         addList: Function,
         backStatusList: Function,
         removeItem: Function,
-    },
-    methods: {
-       
     }
 };
 </script>
