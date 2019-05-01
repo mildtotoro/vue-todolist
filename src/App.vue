@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <TodoList test="อะไรวะ"/>
+    <TodoList />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   name: "app",
   components: {
     // HelloWorld,
-    TodoList
+    TodoList,
   }
 };
 </script>
