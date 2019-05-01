@@ -6,6 +6,7 @@
           
           <button v-if="list.status !== 'done'" @click="addList(list)">next</button>
           <button v-if="list.status !== 'todo'" @click="backStatusList(list)">back</button>
+          <button @click="removeItem(list)">remove</button>
             
         </div>
     </div>
@@ -19,6 +20,7 @@ export default {
         todoList: Array,
         addList: Function,
         backStatusList: Function,
+        removeItem: Function,
     },
     methods: {
        
