@@ -1,31 +1,50 @@
 <template>
   <div>
     <h2>Todolist</h2>
-    <form
-      @submit="handleSubmit"
-    >
-      <input v-model="text" type="text">
-      <input type="submit" value="submit">
-    </form>
-    todo
-    <List 
-      :todoList="todoList"
-      :addList="addDoingList"
-      :removeItem="removeItem"
-    />
-    doing
-    <List 
-      :todoList="doingList"
-      :addList="addDoneList"
-      :removeItem="removeItem"
-      :backStatusList="backStatusList"
-    />
-    done
-    <List 
-      :todoList="doneList"
-      :removeItem="removeItem"
-      :backStatusList="backStatusList"
-    />
+    <div class="ui grid">
+      <div class="column one">
+        <form
+          @submit="handleSubmit"
+        >
+        <div class="ui input">
+  <input v-model="text"  type="text" placeholder="Today i will">
+</div>
+         <button type="submit"  class="ui blue button">Add</button>
+          <!-- <input type="submit" value="submit"> -->
+        </form>
+      </div>
+   
+    </div>
+   
+    <div class="ui three column grid">
+    <div class="row">
+        <div class="column">
+           <h2>To do</h2>
+          <List 
+            :todoList="todoList"
+            :addList="addDoingList"
+            :removeItem="removeItem"
+          />
+        </div>
+        <div class="column">
+          <h2>Doing</h2>
+          <List 
+            :todoList="doingList"
+            :addList="addDoneList"
+            :removeItem="removeItem"
+            :backStatusList="backStatusList"
+          />
+        </div>
+        <div class="column">
+          <h2>Done</h2>
+          <List 
+            :todoList="doneList"
+            :removeItem="removeItem"
+            :backStatusList="backStatusList"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

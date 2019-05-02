@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="ui container" id="app">
     <TodoList />
   </div>
 </template>

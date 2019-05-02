@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
+import '../semantic/out/semantic.min.js';
+import '../semantic/out/semantic.min.css';
 import './main.css';
 
-require('../semantic/out/semantic.min.js');
 Vue.config.productionTip = false
 
 new Vue({

@@ -4,9 +4,19 @@
             
           {{list.text}}
           
-          <button v-if="list.status !== 'done'" @click="addList(list)">next</button>
-          <button v-if="list.status !== 'todo'" @click="backStatusList(list)">back</button>
-          <button @click="removeItem(list)">remove</button>
+          <button @click="addList(list)" v-if="list.status !== 'done'"  
+          class="ui vertical animated button positive basic mini" tabindex="0">
+            <div class="hidden content">
+                {{(list.status == 'todo')?"Doing":"Done"}}
+            </div>
+            <div class="visible content">
+                <i class="check icon"></i>
+            </div>
+        </button>
+
+        
+          <button v-if="list.status !== 'todo'" class="ui secondary basic button mini" @click="backStatusList(list)"><i class="icon undo"></i></button>
+          <button @click="removeItem(list)" class="ui secondary basic button mini"><i class="icon x"></i></button>
             
         </div>
     </div>
